@@ -13,7 +13,7 @@ fn get_guess() -> String {
 
     // Prompts user for the guess and puts response into 'guess' variable
     println!("What is your guess? ");
-    std::io::stdin().read_line(& mut guess).unwrap();
+    std::io::stdin().read_line(& mut guess).expect("Failed to read user input.");
 
     // Sheds off the newline character
     let _guess = guess.trim().to_string();
@@ -30,7 +30,7 @@ fn get_guess() -> String {
         while _response != "y" && _response != "n"{
             let mut _response = String::new();
             println!("Do you accept '{_first_letter}' as your answer? (y/n)");
-            std::io::stdin().read_line(& mut _response).unwrap();
+            std::io::stdin().read_line(& mut _response).expect("Failed to read user input");
             let undercase_response = _response.trim().to_lowercase();
 
             // Prompts the user again and returns the new response
@@ -95,7 +95,8 @@ fn clear(){
 
 fn get_random_word(_word_arrray:[&str;5])-> &str {
     // gets a random number
-    let rand_index = rand::thread_rng().gen_range(0.._word_arrray.len()+1);
+    let rand_index = rand::thread_rng().gen_range(0.._word_arrray.len()
+);
 
     // gets the word at the random index and returns it
     let chosen_word: &str = _word_arrray[rand_index];
@@ -122,9 +123,9 @@ fn display_stages(stage_number: usize){
 
 fn play_game(){
     // Presents user with instructions
-    println!("Welcome to the Hangman Game! The program will generate");
-    println!("a random word from a list, and you have to try to guess the letters.");
-    println!("6 wrong guesses, and you are out!");
+    println!("Welcome to the Hangman Game! The program will generate a");
+    println!("random word from a list, and you have to try to guess the letters.");
+    println!("Six wrong guesses, and you are out!");
     println!("");
 
     // Initialize variables

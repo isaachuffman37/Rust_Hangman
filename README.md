@@ -1,33 +1,27 @@
 # Overview
 
-{Important! Do not say in this section that this is college assignment. Talk about what you are trying to accomplish as a software engineer to further your learning.}
+This Rust program lets the user play the popular game "Hangman" in the terminal. It displays a message to the user describing the game's rules and chooses a random word from a list that the player must guess. If the user enters a guess that is more than one character, it doesn't just prompt the user again, it slices the guess to get the first letter of that guess and then asks if the user wants that letter to be their guess. If not, the program prompts the user for another guess. If the user's guess is in the random word, it displays the guess in place of the dash on the dashed line. If it is not in the random word, the program displays the next stage of the ASCII representation of hangman and displays the wrong guess to the user. Once the player guesses all of the letters in the word, it displays the word and a congratulatory message. If they guess incorrectly six times, the program will display all of the parts of the "hanged man" and displays a discouraging message to the user. 
 
 
-{Provide a description of the software that you wrote to demonstrate the Rust language.}
+This personal project helped stretch my ability to learn new and difficult programming languages. I wanted to test my ability to problem-solve and implement my knowlege of programming in a language that I have never seen or used. I also wanted to challenge myself by choosing a language that uses concepts that are unique to other languages (in this case, using the concept of ownership to help prevent memmory errors).
 
-{Describe your purpose for writing this software.}
 
-{Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running and a walkthrough of the code. Focus should be on sharing what you learned about the language syntax.}
-
-[Software Demo Video](http://youtube.link.goes.here)
+[Here is a Demo Video](https://youtu.be/LHUgrTcDd8o)
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
+I used VSCode and a few libraries from the language. I used the "rand" library so that I could generate a random index and the "Command" library so that I could clear the console.  
 
-{Describe the programming language that you used and any libraries.}
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
-
-- [Web Site Name](http://url.link.goes.here)
-- [Web Site Name](http://url.link.goes.here)
+- [The Rust Book](https://doc.rust-lang.org/book/)
+- [Tutorials Point](https://www.tutorialspoint.com/rust/index.htm)
 
 # Future Work
 
-{Make a list of things that you need to fix, improve, and add in the future.}
+- Strengthen the cohesion of my functions ( especially get_guess()) so they only do one thing.
+- Increase the level of abstraction by taking some of the logic of "Hangman" in the function "play_game()" and making them into separate funtions that "play_game()" will call. This will strengthen cohesion as well. 
+- Adjust my program layout and syntax to what is typical for Rust
+- Allow the user to save the progress of the game by writing the list of guesses to a file and reading it again into the program. 
 
-- Item 1
-- Item 2
-- Item 3
