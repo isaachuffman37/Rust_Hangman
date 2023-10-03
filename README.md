@@ -6,7 +6,7 @@ This Rust program lets the user play the popular game "Hangman" in the terminal.
 This personal project helped stretch my ability to learn new and difficult programming languages. I wanted to test my ability to problem-solve and implement my knowlege of programming in a language that I have never seen or used. I also wanted to challenge myself by choosing a language that uses concepts that are unique to other languages (in this case, using the concept of ownership to help prevent memmory errors).
 
 
-[Here is a Demo Video](https://youtu.be/LHUgrTcDd8o)
+[LINK TO DEMO VIDEO](https://youtu.be/LHUgrTcDd8o)
 
 # Development Environment
 
